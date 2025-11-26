@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>Commander Life Counter - Cruz</title>
+  <title>Commander Life Counter - Cruz (ajustado)</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -17,11 +17,13 @@
       <button class="btn plus" aria-label="aumentar">+</button>
     </div>
 
-    <!-- LEFT - PLAYER 2 -->
+    <!-- LEFT - PLAYER 2 (conteúdo girado dentro de .inner) -->
     <div class="player left p2" data-player="2">
-      <button class="btn minus" aria-label="diminuir">-</button>
-      <div class="life">40</div>
-      <button class="btn plus" aria-label="aumentar">+</button>
+      <div class="inner">
+        <button class="btn minus" aria-label="diminuir">-</button>
+        <div class="life">40</div>
+        <button class="btn plus" aria-label="aumentar">+</button>
+      </div>
     </div>
 
     <!-- BOTTOM - PLAYER 3 -->
@@ -31,21 +33,17 @@
       <button class="btn plus" aria-label="aumentar">+</button>
     </div>
 
-    <!-- RIGHT - PLAYER 4 -->
+    <!-- RIGHT - PLAYER 4 (conteúdo girado dentro de .inner) -->
     <div class="player right p4" data-player="4">
-      <button class="btn minus" aria-label="diminuir">-</button>
-      <div class="life">40</div>
-      <button class="btn plus" aria-label="aumentar">+</button>
+      <div class="inner">
+        <button class="btn minus" aria-label="diminuir">-</button>
+        <div class="life">40</div>
+        <button class="btn plus" aria-label="aumentar">+</button>
+      </div>
     </div>
 
   </div>
 
   <script src="script.js"></script>
-  <script>
-    // registra service worker opcional (PWA)
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./service-worker.js').catch(()=>{/* ignore on dev server */});
-    }
-  </script>
 </body>
 </html>
